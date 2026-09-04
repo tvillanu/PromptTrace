@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 320px;
+      height: 400px;
+      margin: 0;
+      padding: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f9fafb;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    h2 { margin: 0; font-size: 16px; color: #111827; }
+    .actions { display: flex; gap: 6px; }
+    button {
+      padding: 6px 10px;
+      font-size: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+    }
+    button:hover { background: #f3f4f6; }
+    #logContainer {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .log-card {
+      background: #fff;
+      padding: 8px 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      color: #6b7280;
+      font-size: 10px;
+      margin-bottom: 4px;
+    }
+    .prompt-text {
+      color: #1f2937;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+    .empty { color: #9ca3af; text-align: center; margin-top: 40px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>PromptTrace Log</h2>
+    <div class="actions">
+      <button id="exportBtn">Export</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+  </div>
+  <div id="logContainer">
+    <div class="empty">No prompts logged yet.</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
