@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PromptTrace</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup-container">
+      <header class="popup-header">
+        <div class="brand">
+          <img src="prompttrace16.png" alt="PromptTrace Logo" class="logo" />
+          <h2>Prompt Trace</h2>
+        </div>
+               
+      </header>
+
+      <p class="version-label">Version 1.0.0</p>
+
+
+      <section class="popup-info">
+        <p class="description">
+          Effortlessly track, audit, and log your AI prompts and responses across platforms, then export your history to CSV anytime with full control over your data.
+        </p>
+        <!-- <p>
+        For more information on PromptTrace, visit our <a href="https://mtn-security.web.app">website</a>.
+        </p> -->
+        <p>
+          Click <strong>Export</strong> below to download a CSV file viewable in Excel or any spreadsheet app.
+        </p>
+        <p>
+          Click <strong>Clear</strong> below to clear the cache of all logged prompts and responses.   
+        </p>
+        <p>
+          To contribute to this Github project, visit <a href="https://github.com/tvillanu/PromptTrace">PromptTrace</a>
+        </p> 
+        
+      </section>
+
+      <section id="logContainer" class="log-container" aria-live="polite"></section>
+      <section class="popup-actions">
+        <button id="exportBtn" type="button">Export</button>
+        <button id="clearBtn" type="button">Clear</button>
+      </section>
+
+      <p>
+          <strong>Note:</strong> PromptTrace does not store any data on external servers. All logged prompts and responses are stored locally in your browser's cache.
+      </p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+:root {
+  color-scheme: dark;
+  --prompttrace-bg: #2e3141;
+  --prompttrace-panel: rgba(255, 255, 255, 0.025);
+  --prompttrace-border: rgba(255, 255, 255, 0.125);
+  --prompttrace-text: #ffffff;
+  --prompttrace-muted: rgba(255, 255, 255, 0.7);
+  --prompttrace-accent: #b24c2f;
+  --prompttrace-button: #1e2a24;
+  --prompttrace-button-text: #fffdf8;
+}
+
+body {
+  width: 340px;
+  margin: 0;
+  padding: 12px;
+  box-sizing: border-box;
+  background-color: var(--prompttrace-bg);
+  background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8));
+  color: var(--prompttrace-text);
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  line-height: 1.65;
+}
+
+.popup-container {
+  background: var(--prompttrace-panel);
+  border: solid 1px var(--prompttrace-border);
+  border-radius: 10px;
+  padding: 16px 14px 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.popup-header,
+.popup-info,
+.log-container,
+.popup-actions {
+  margin-bottom: 12px;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+button {
+  flex: 1;
+  width: auto;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--prompttrace-button);
+  color: var(--prompttrace-button-text);
+  cursor: pointer;
+  font: 700 13px "Source Sans Pro", Helvetica, sans-serif;
+}
+
+button:disabled {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: default;
+}
+.brand {
+  display: flex;
+  align-items: baseline; /* Align elements along their text baseline/bottom */
+  justify-content: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 22px;
+  height: 22px;
+  display: block;
+  object-fit: contain;
+}
+
+h2 {
+  margin: 0; /* Removed margin-bottom: 8px to keep bottom edge flush */
+  color: var(--prompttrace-text);
+  font-family: Raleway, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  color: var(--prompttrace-text);
+  font-family: Raleway, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+p,
+a {
+  color: var(--prompttrace-text);
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.description {
+  margin: 0 0 10px;
+  color: var(--prompttrace-muted);
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.popup-info p {
+  color: var(--prompttrace-muted);
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.popup-container > p:last-of-type {
+  margin-top: 10px;
+  color: var(--prompttrace-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.version-label {
+  margin: 0 0 12px;
+  text-align: center;
+  color: var(--prompttrace-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.popup-actions,
+.popup-actions button,
+.log-card,
+.log-card .meta,
+.log-card .prompt-text,
+.empty {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.contribute-link {
+  display: inline-block;
+  color: var(--prompttrace-text);
+  border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+}
+
+.contribute-link:hover {
+  border-bottom-color: transparent;
+}
+
+.log-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.log-card {
+  padding: 10px;
+  border: 1px solid var(--prompttrace-border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.log-card .meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--prompttrace-muted);
+}
+
+.log-card .prompt-text {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--prompttrace-text);
+  word-break: break-word;
+}
+
+.empty {
+  color: var(--prompttrace-muted);
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+}
+
